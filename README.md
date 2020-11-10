@@ -20,12 +20,12 @@ Run cmake and set `-DMKL_ROOT` to the root directory of your MKL installation <M
 
 Your <MKL_ROOT> will look something like `<...>/intel/mkl`
 
-Make everything
+Compile everything and move back to the root directory.
 `make; cd ..`
 
 # Usage
-Head over to `bin` directory. Use the first argument to specify a `.g2o` file. Examples are provided in `/data`
-`./maks <.g2o file>`
+Head over to `bin`. Use the first argument to specify a `.g2o` file. Examples are provided in `/data`
+`./maks ../data/parking-garage.g2o`
 
 # Author
 * Gabriel Moreira
