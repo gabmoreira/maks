@@ -35,7 +35,7 @@ Head over to `bin`. Use the first argument to specify a `.g2o` file. Example dat
 * Gabriel Moreira
 
 # References
-* Gabriel Moreira, Manuel Marques and João Paulo Costeira. Fast Pose Graph Optimization via Krylov-Schur and Cholesky Factorization, 2021
+* Gabriel Moreira, Manuel Marques and João Paulo Costeira. Fast Pose Graph Optimization via Krylov-Schur and Cholesky Factorization. In Winter Conference on Applications of Computer Vision (WACV), 2021
 
 # Datasets
 * L. Carlone, R. Tron, K. Daniilidis, and F. Dellaert. Initialization Techniques for 3D SLAM: a Survey on Rotation Estimation and its Use in Pose Graph Optimization. In IEEE Intl. Conf. on Robotics and Automation (ICRA), pages 4597-4604, 2015.
