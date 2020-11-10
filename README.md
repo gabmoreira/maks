@@ -17,13 +17,13 @@ Clone the repository:
 Create a build directory 
 `mkdir build; cd build;`
 
-Run cmake and set -DMKL_ROOT to the root directory of your MKL installation e.g., ~/intel/mkl
+Run cmake and set -DMKL_ROOT to the root directory of your MKL installation <MKL_ROOT> e.g., <...>/intel/mkl
 `cmake -DMKL_ROOT=<MKL_ROOT> ..`
 
 Make everything
 `make; cd ..`
 
-Head over to /bin and enjoy!  
+Head over to `maks/bin` and you're ready to go!  
 `./maks ../data/parking-garage.g2o`
 
 # Author
