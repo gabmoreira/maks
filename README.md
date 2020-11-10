@@ -27,13 +27,14 @@ Compile everything and move back to the root directory
 Head over to `bin`. Use the first argument to specify a `.g2o` file. Example datasets are provided in `/data`  
 `./maks ../data/parking-garage.g2o`
 
-# Author
-* Gabriel Moreira
-
 # References
 * Gabriel Moreira, Manuel Marques and João Paulo Costeira. Fast Pose Graph Optimization via Krylov-Schur and Cholesky Factorization. To appear in Winter Conference on Applications of Computer Vision (WACV), 2021.
 
 # Datasets
 * L. Carlone, R. Tron, K. Daniilidis, and F. Dellaert. Initialization Techniques for 3D SLAM: a Survey on Rotation Estimation and its Use in Pose Graph Optimization. In IEEE Intl. Conf. on Robotics and Automation (ICRA), pages 4597-4604, 2015.
 * L. Carlone, D. M. Rosen, G. C. Calafiore, J. J. Leonard, and F. Dellaert. Lagrangian Duality in 3D SLAM: Verification Techniques and Optimal Solutions. In IEEE/RSJ Intl. Conf. on Intelligent Robots and Systems (IROS), 2015.
+
+
+# Author
+* Gabriel Moreira, 2020
 
