@@ -13,7 +13,6 @@
 #ifndef KRYLOV_H
 #define KRYLOV_H
 
-/* Comment line below if system does not have MKL installed */
 #define EIGEN_USE_MKL_ALL
 
 #include <Eigen/Dense>
