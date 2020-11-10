@@ -245,13 +245,7 @@ Sparse Graph::transformationMatrix() {
  * indefinite problem via Cholesky's LDL^T factorization.
  ******************************************************************************/
 void Graph::optimize(Ref<MatrixXd> evecs, double sigma, double& cf) {
-  printf("____________________________________________________\n");
-  printf("                  Optimization log\n");
-  printf("----------------------------------------------------\n");
-  printf("Sparse solvers | Intel MKL2020 PARDISO Cholesky LDL\n");
-  printf("----------------------------------------------------\n");
-  printf("CPU Time (sec) |                Routine\n");
-  printf("----------------------------------------------------\n");
+  printf("Running MAKS solver... ");
 
   MKL_LDLT choleskySolver;
 
@@ -261,8 +255,7 @@ void Graph::optimize(Ref<MatrixXd> evecs, double sigma, double& cf) {
   VectorXd D = Adj * VectorXd::Ones(num_nodes);
 
   auto stop = high_resolution_clock::now();
-  auto duration = duration_cast<microseconds>(stop - start);
-  printf("   %.6f    |    Graph degree vector\n", static_cast<float>(duration.count())*1e-6);
+  auto duration_graph = duration_cast<microseconds>(stop - start);
 
   start = high_resolution_clock::now();
   /* BUILD LAPLACIAN NORMALIZED ROTATIONS MATRIX */
@@ -309,14 +302,12 @@ void Graph::optimize(Ref<MatrixXd> evecs, double sigma, double& cf) {
   lnr.setFromTriplets(lnrEntries.begin(), lnrEntries.end());                    // Build sparse matrix
 
   stop = high_resolution_clock::now();
-  duration = duration_cast<microseconds>(stop - start);
-  printf("   %.6f    |    Created rotations block matrix\n", static_cast<long long int>(duration.count())*1e-6);
+  auto duration_rotmat = duration_cast<microseconds>(stop - start);
 
   start = high_resolution_clock::now();
   choleskySolver.analyzePattern(lnr);                                           // Cholesky LDL^T analysis
   stop = high_resolution_clock::now();
-  duration = duration_cast<microseconds>(stop - start);
-  printf("   %.6f    |    Cholesky pattern analysis\n", static_cast<long long int>(duration.count())*1e-6);
+  auto duration_chol = duration_cast<microseconds>(stop - start);
 
   /* ROTATION AVERAGING */
   start = high_resolution_clock::now();
@@ -334,8 +325,7 @@ void Graph::optimize(Ref<MatrixXd> evecs, double sigma, double& cf) {
   for (unsigned int i = 0; i < num_nodes; ++i) { internal::projectToSO3(revecs.block<SO3_SIZE,SO3_SIZE>(i*3,0)); };
 
   stop = high_resolution_clock::now();
-  duration = duration_cast<microseconds>(stop - start);
-  printf("   %.6f    |    Solved rotation averaging\n", static_cast<long long int>(duration.count())*1e-6);
+  auto duration_eigs = duration_cast<microseconds>(stop - start);
 
   /*---------------------------------------------------------------------------*/
   start = high_resolution_clock::now();
@@ -401,8 +391,7 @@ void Graph::optimize(Ref<MatrixXd> evecs, double sigma, double& cf) {
   kry::sparseSolve(&choleskySolver, A, b, translations);                        // Solve for x : Ax = b. Use the same solver
 
   stop = high_resolution_clock::now();
-  duration = duration_cast<microseconds>(stop - start);
-  printf("   %.6f    |    Optimized for translations\n", static_cast<long long int>(duration.count())*1e-6);
+  auto duration_trans = duration_cast<microseconds>(stop - start);
 
   evecs = MatrixXd::Zero(num_nodes*SE3_SIZE, SE3_SIZE);                         // Set up what will be our matrix with global transformations
 
@@ -418,7 +407,19 @@ void Graph::optimize(Ref<MatrixXd> evecs, double sigma, double& cf) {
   /* Everything w.r.t to the first pose */
   Matrix4d first_transformation = evecs.block<SE3_SIZE,SE3_SIZE>(0,0);
   evecs = evecs * first_transformation.inverse();
-
+  printf("Done!\n\n");
+  printf("____________________________________________________\n");
+  printf("                  Optimization log\n");
+  printf("----------------------------------------------------\n");
+  printf("Sparse solvers | Intel MKL2020 PARDISO Cholesky LDL\n");
+  printf("----------------------------------------------------\n");
+  printf("CPU Time (sec) |                Routine\n");
+  printf("----------------------------------------------------\n");
+  printf("   %.6f    |    Graph degree vector\n", static_cast<float>(duration_graph.count())*1e-6);
+  printf("   %.6f    |    Created rotations block matrix\n", static_cast<long long int>(duration_rotmat.count())*1e-6);
+  printf("   %.6f    |    Cholesky pattern analysis\n", static_cast<long long int>(duration_chol.count())*1e-6);
+  printf("   %.6f    |    Solved rotation averaging\n", static_cast<long long int>(duration_eigs.count())*1e-6);
+  printf("   %.6f    |    Optimized for translations\n", static_cast<long long int>(duration_trans.count())*1e-6);
   printf("____________________________________________________\n");
 };
 

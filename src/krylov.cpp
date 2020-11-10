@@ -225,9 +225,6 @@ void eigs(MKL_LDLT* solver, const Sparse& A, VectorXd& eigenvalues,
     sizeV = k;
   };   /* End of the iteration loop */
 
-  /* More reasonable people would check for convergence here and return only
-   * eigenpairs which converged. We, on the other hand, do not have time for
-   * such nonsense */
   eigenvectors = MatrixXd::Zero(ritz_vectors.rows(), k0);
   eigenvalues = VectorXd::Zero(k0);
 
