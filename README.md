@@ -17,8 +17,10 @@ Clone the repository:
 Create a build directory 
 `mkdir build; cd build;`
 
-Run cmake and set -DMKL_ROOT to the root directory of your MKL installation <MKL_ROOT> e.g., <...>/intel/mkl
+Run cmake and set -DMKL_ROOT to the root directory of your MKL installation <MKL_ROOT> 
 `cmake -DMKL_ROOT=<MKL_ROOT> ..`
+
+Your <MKL_ROOT> will look something like `<...>/intel/mkl`
 
 Make everything
 `make; cd ..`
