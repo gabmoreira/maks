@@ -10,8 +10,6 @@
 * or implied  warranties,  other  than those  that are  expressly stated  in the
 * License.
 *******************************************************************************/
-#define EIGEN_USE_MKL_ALL
-
 #include <map>
 #include <chrono>
 #include <fstream>

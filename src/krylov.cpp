@@ -10,10 +10,6 @@
 * or implied  warranties,  other  than those  that are  expressly stated  in the
 * License.
 *******************************************************************************/
-
-/* Comment line below if system does not have MKL installed */
-#define EIGEN_USE_MKL_ALL
-
 #include <vector>
 #include <numeric>
 #include <iostream>
