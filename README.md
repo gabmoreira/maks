@@ -12,19 +12,19 @@ Get Intel® MKL for Linux [here](https://software.intel.com/content/www/us/en/de
 Clone the repository:  
 `git clone https://github.com/gabmoreira/maks.git`  
 
-Create a build directory 
+Create a build directory:
 `mkdir build; cd build`
 
-Run cmake and set `-DMKL_ROOT` to the root directory of your MKL installation <MKL_ROOT> 
+Run cmake and set `-DMKL_ROOT` to the root directory of your MKL installation <MKL_ROOT> :
 `cmake -DMKL_ROOT=<MKL_ROOT> ..`
 
 Your <MKL_ROOT> will look something like `<...>/intel/mkl`
 
-Compile everything and move back to the root directory.
+Compile everything and move back to the root directory:
 `make; cd ..`
 
 # Usage
-Head over to `bin`. Use the first argument to specify a `.g2o` file. Example datasets are provided in `/data`
+Head over to `bin`. Use the first argument to specify a `.g2o` file. Example datasets are provided in `/data`:
 
 `./maks ../data/parking-garage.g2o`
 
