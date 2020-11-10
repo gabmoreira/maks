@@ -12,7 +12,7 @@ MAKS is built on top of:
 Get Intel® MKL for Linux [here](https://software.intel.com/content/www/us/en/develop/tools/math-kernel-library/choose-download/linux.html) and install it.
 
 Clone the repository:  
-`git clone https://github.com/gabmoreira/pipe.git`  
+`git clone https://github.com/gabmoreira/maks.git`  
 
 Create a build directory 
 `mkdir build; cd build;`
