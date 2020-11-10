@@ -1,5 +1,5 @@
 # MAKS
-### Motion Averaging via Krylov-Schur
+### Motion Averaging Krylov-Schur
 
 # Dependencies
 * [Eigen](http://eigen.tuxfamily.org) : Header-only library used for matrix operations and sparse solvers.
