@@ -37,9 +37,9 @@ int main(int argc, char *argv[]) {
     double cf = -1.0;
     MatrixXd evecs = MatrixXd::Zero(g.num_nodes*4,4);
     g.optimize(evecs, 1e-10, cf);
+    return 0;
   } else {
     printf("Error reading file %s\n", dataset.c_str());
+    return 1;
   };
-
-  return 0;
 };
