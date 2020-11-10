@@ -23,11 +23,9 @@ Your <MKL_ROOT> will look something like `<...>/intel/mkl`
 Make everything
 `make; cd ..`
 
-Head over to bin directory
-`cd ../bin`
-
-You're ready to go
-`./maks ../data/parking-garage.g2o`
+# Usage
+Head over to `bin` directory. Use the first argument to specify a `.g2o` file. Examples are provided in `/data`
+`./maks <.g2o file>`
 
 # Author
 * Gabriel Moreira
