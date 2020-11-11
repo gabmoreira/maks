@@ -6,7 +6,7 @@
 * [Intel® MKL](https://software.intel.com/content/www/us/en/develop/tools/math-kernel-library.html) : Free proprietary math library.
 
 
-# Compilation
+# Compiling
 Get Intel® MKL for Linux [here](https://software.intel.com/content/www/us/en/develop/tools/math-kernel-library/choose-download/linux.html) and install it.
 
 Clone the repository  
