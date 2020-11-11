@@ -410,9 +410,9 @@ void Graph::optimize(Ref<MatrixXd> evecs, double sigma, double& cf) {
   printf("____________________________________________________\n");
   printf("                  Optimization log\n");
   printf("----------------------------------------------------\n");
-  printf("Sparse solvers | Intel MKL2020 PARDISO Cholesky LDL\n");
+  printf("Sparse solver  |   Intel MKL PARDISO Cholesky LDL\n");
   printf("----------------------------------------------------\n");
-  printf("CPU Time (sec) |                Routine\n");
+  printf("CPU Time (s)   |             Routine\n");
   printf("----------------------------------------------------\n");
   printf("   %.6f    |    Graph degree vector\n", static_cast<long long int>(duration_graph.count())*1e-6);
   printf("   %.6f    |    Created rotations block matrix\n", static_cast<long long int>(duration_rotmat.count())*1e-6);
