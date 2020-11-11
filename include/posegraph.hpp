@@ -111,8 +111,18 @@ class Graph {
      ******************************************************************************/
     void readG2O(const char* path);
 
+
+    /*******************************************************************************
+     * Writes 4x4 SE(3) matrices to .g2o file.
+     *
+     * @return Nothing.
+     ******************************************************************************/
+    void writeG2O(const char* dataset, Eigen::Ref<Eigen::MatrixXd> transf);
+
+
+    /* Ready for optimization or not */
     bool ready;
-    
+
     /* Number of edges. (i,j) and (j,i) are only counted once */
     unsigned int num_edges;
 
