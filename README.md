@@ -28,7 +28,7 @@ Head over to `bin`. Use the first argument to specify a `.g2o` file. Example dat
 `./maks ../data/grid3D.g2o`
 
 If all goes well, you will get something like this:
-
+`
 ____________________________________________________
                    Loading data 
 ----------------------------------------------------
@@ -52,7 +52,7 @@ CPU Time (sec) |                Routine
    0.130640    |    Optimized for translations
 ____________________________________________________
 
-Optimized pose graph saved to ../data/grid3D_maks.g2o
+Optimized pose graph saved to ../data/grid3D_maks.g2o`
 
 
 # References
