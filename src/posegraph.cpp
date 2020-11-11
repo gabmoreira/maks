@@ -16,6 +16,7 @@
 #include <sstream>
 #include <string>
 #include <iostream>
+#include <iomanip>
 #include <numeric>
 
 #include <Eigen/Geometry>
@@ -405,7 +406,7 @@ void Graph::optimize(Ref<MatrixXd> evecs, double sigma, double& cf) {
   /* Everything w.r.t to the first pose */
   Matrix4d first_transformation = evecs.block<SE3_SIZE,SE3_SIZE>(0,0);
   evecs = evecs * first_transformation.inverse();
-  printf("Done!\n\n");
+  printf("Done!\n");
   printf("____________________________________________________\n");
   printf("                  Optimization log\n");
   printf("----------------------------------------------------\n");
@@ -413,7 +414,7 @@ void Graph::optimize(Ref<MatrixXd> evecs, double sigma, double& cf) {
   printf("----------------------------------------------------\n");
   printf("CPU Time (sec) |                Routine\n");
   printf("----------------------------------------------------\n");
-  printf("   %.6f    |    Graph degree vector\n", static_cast<float>(duration_graph.count())*1e-6);
+  printf("   %.6f    |    Graph degree vector\n", static_cast<long long int>(duration_graph.count())*1e-6);
   printf("   %.6f    |    Created rotations block matrix\n", static_cast<long long int>(duration_rotmat.count())*1e-6);
   printf("   %.6f    |    Cholesky pattern analysis\n", static_cast<long long int>(duration_chol.count())*1e-6);
   printf("   %.6f    |    Solved rotation averaging\n", static_cast<long long int>(duration_eigs.count())*1e-6);
@@ -474,4 +475,41 @@ void Graph::readG2O(const char* path) {
   printf("Nodes :            %d\n", num_nodes);
   printf("____________________________________________________\n\n");
   ready = true;
+};
+
+
+/*******************************************************************************
+ * Writes optimized pose graph to disk in .g2o format. Filename convention uses
+ * the original dataset's name + "_maks.g2o"
+ ******************************************************************************/
+void Graph::writeG2O(const char* dataset, Eigen::Ref<MatrixXd> estimate) {
+  string filepath = string(dataset) + "_maks.g2o";
+
+  std::ostringstream buffer;
+  buffer.clear();
+
+  for (int i = 0; i < num_nodes; ++i) {
+    buffer << "VERTEX_SE3:QUAT";
+    buffer << " " << std::to_string(i);
+    buffer << " " << std::fixed << std::setprecision(6) << estimate(i*4,3);   // X
+    buffer << " " << std::fixed << std::setprecision(6) << estimate(i*4+1,3); // Y
+    buffer << " " << std::fixed << std::setprecision(6) << estimate(i*4+2,3); // Z
+
+    Eigen::Quaterniond Qij(estimate.block<3,3>(i*4,0));
+
+    buffer << " " << std::fixed << std::setprecision(6) << Qij.x();           // QX
+    buffer << " " << std::fixed << std::setprecision(6) << Qij.y();           // QY
+    buffer << " " << std::fixed << std::setprecision(6) << Qij.z();           // QZ
+    buffer << " " << std::fixed << std::setprecision(6) << Qij.w() << "\n";   // QW
+  };
+
+  std::ofstream outfile;
+  outfile.open(filepath);
+  if(!outfile) {
+    return;
+  };
+
+  outfile << buffer.str();
+  outfile.close();
+  printf("\nOptimized pose graph saved to %s\n", filepath.c_str());
 };
