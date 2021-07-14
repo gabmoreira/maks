@@ -1,4 +1,15 @@
 classdef Matcha < handle
+% MATCHA Feature extraction using HoG
+%
+% Other m-files required: @Matcha/*
+% Subfunctions: none
+% MAT-files required: none
+%
+% Author:        Gabriel Moreira
+% email:         gmoreira (at) isr.tecnico.ulisboa.pt
+% Website:       https://www.github.com/gabmoreira/maks
+% Last revision: 14-July-2021
+
     properties (Access = public)
         params;
         

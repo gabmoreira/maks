@@ -1,4 +1,14 @@
 function computeFeatures(obj)
+% COMPUTEFEATURES Compute SIFT feature descriptors
+%
+% Other m-files required: Matcha.m
+% Subfunctions: none
+% MAT-files required: none
+%
+% Author:        Gabriel Moreira
+% email:         gmoreira (at) isr.tecnico.ulisboa.pt
+% Website:       https://www.github.com/gabmoreira/maks
+% Last revision: 14-July-2021
 
 assert(obj.COMPUTED_DOG_EXTREMA, 'Matcha: Must compute Difference-of-Gaussian (dog) extrema first.');
 assert(obj.ASSIGNED_ORIENTATIONS, 'Matcha: Must assign orientations first.');

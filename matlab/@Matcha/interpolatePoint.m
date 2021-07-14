@@ -1,4 +1,14 @@
 function [success, news, newi, newj, newx, newy, sigma, peakval] = interpolatePoint(obj, o, s, i, j)
+% INTERPOLATEPOINT Interpolate a scale-space point
+%
+% Other m-files required: Matcha.m
+% Subfunctions: none
+% MAT-files required: none
+%
+% Author:        Gabriel Moreira
+% email:         gmoreira (at) isr.tecnico.ulisboa.pt
+% Website:       https://www.github.com/gabmoreira/maks
+% Last revision: 14-July-2021
 
 news    = s;
 newi    = i;

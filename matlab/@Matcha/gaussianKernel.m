@@ -1,4 +1,15 @@
 function [h, size] = gaussianKernel(obj, sflag, std, size)
+% GAUSSIANKERNEL Create a 2D Gaussian filter
+%
+% Other m-files required: Matcha.m
+% Subfunctions: none
+% MAT-files required: none
+%
+% Author:        Gabriel Moreira
+% email:         gmoreira (at) isr.tecnico.ulisboa.pt
+% Website:       https://www.github.com/gabmoreira/maks
+% Last revision: 14-July-2021
+
 if (sflag) 
     n = size;
 else

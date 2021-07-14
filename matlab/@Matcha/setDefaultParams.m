@@ -1,7 +1,7 @@
 function setDefaultParams(obj)
-% SETDEFAULTPARAMS Plots n cameras on a circle, given absolute rotations.
+% SETDEFAULTPARAMS Use SIFT default parameters
 %
-% Other m-files required: none
+% Other m-files required: Matcha.m
 % Subfunctions: none
 % MAT-files required: none
 %

@@ -1,4 +1,14 @@
 function computePyramid(obj)
+% COMPUTEPYRAMID Compute Gaussian and DoG pyramid
+%
+% Other m-files required: Matcha.m
+% Subfunctions: none
+% MAT-files required: none
+%
+% Author:        Gabriel Moreira
+% email:         gmoreira (at) isr.tecnico.ulisboa.pt
+% Website:       https://www.github.com/gabmoreira/maks
+% Last revision: 14-July-2021
 
 % Create seed image by interpolating the input image with
 % a pixel distance of 0.5 and then blurring it to bring the 

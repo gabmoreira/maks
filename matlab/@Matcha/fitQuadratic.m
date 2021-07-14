@@ -1,10 +1,22 @@
 function [offset, peakval, info] = fitQuadratic(obj, o, s, i, j)
+% FITQUADRATIC Fit scale-space quadratic to a keypoint
+%
 % Apply the method developed by Matthew Brown (see BMVC 02 paper) to
 % fit a 3D quadratic function through the DOG function values around
 % the location (o,s,i,j) at which a peak has
 % been detected.  Return the interpolated peak position as a vector
 % in "offset", which gives offset from position (s,i,j).  The
 % returned value is the interpolated DOG magnitude at this peak.
+%
+% Other m-files required: Matcha.m
+% Subfunctions: none
+% MAT-files required: none
+%
+% Author:        Gabriel Moreira
+% email:         gmoreira (at) isr.tecnico.ulisboa.pt
+% Website:       https://www.github.com/gabmoreira/maks
+% Last revision: 14-July-2021
+
 info = true;
 
 % Fill in the values of the gradient from pixel differences

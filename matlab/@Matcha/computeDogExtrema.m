@@ -1,5 +1,14 @@
 function computeDogExtrema(obj)
-% Scale-space extrema detection in this octave
+% COMPUTEDOGEXTREMA Compute Difference-of-Gaussian extrema
+%
+% Other m-files required: Matcha.m
+% Subfunctions: none
+% MAT-files required: none
+%
+% Author:        Gabriel Moreira
+% email:         gmoreira (at) isr.tecnico.ulisboa.pt
+% Website:       https://www.github.com/gabmoreira/maks
+% Last revision: 14-July-2021
 
 assert(obj.COMPUTED_DOG, 'Must compute Difference-of-Gaussian (DoG) first.');
 

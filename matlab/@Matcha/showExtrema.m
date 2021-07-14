@@ -1,7 +1,7 @@
 function showExtrema(obj)
 % SHOWEXTREMA Shows DoG extrema
 %
-% Other m-files required: none
+% Other m-files required: Matcha.m
 % Subfunctions: none
 % MAT-files required: none
 %

@@ -1,4 +1,14 @@
 function inEdge = isEdge(obj, octave, scale, i, j)
+% ISEDGE Compute edge response of a scale-space point
+%
+% Other m-files required: Matcha.m
+% Subfunctions: none
+% MAT-files required: none
+%
+% Author:        Gabriel Moreira
+% email:         gmoreira (at) isr.tecnico.ulisboa.pt
+% Website:       https://www.github.com/gabmoreira/maks
+% Last revision: 14-July-2021
 
 % Compute 2x2 Hessian values from pixel differences 
 H00 = obj.dog{octave}(i-1,j,scale) - 2.0 * obj.dog{octave}(i,j,scale) ...

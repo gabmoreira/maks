@@ -1,4 +1,14 @@
 function [inlierPts1, inlierPts2, F, pts1, pts2] = match(obj, im2, ratio, pnorm, maxiter, errorThresh, inlierThresh)
+% MATCH compute nearest neighbors and filter with epipolar constraint
+%
+% Other m-files required: 3d/epipolarRansac.m, 3d/epipolarGeometry.m
+% Subfunctions: none
+% MAT-files required: none
+%
+% Author:        Gabriel Moreira
+% email:         gmoreira (at) isr.tecnico.ulisboa.pt
+% Website:       https://www.github.com/gabmoreira/maks
+% Last revision: 14-July-2021
 
 assert(obj.COMPUTED_DESCRIPTIONS, 'Matcha: Must compute descriptions first.');
 
