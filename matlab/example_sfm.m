@@ -1,3 +1,14 @@
+% POSEGRAPH_EXAMPLE Mini tutorial on SfM from two images
+%
+% Other m-files required: ./@Matcha/*, ./geo/*, ./math/*, ./3d/*, ./graphix/*
+% Subfunctions: none
+% MAT-files required: none
+%
+% Author:        Gabriel Moreira
+% email:         gmoreira (at) isr.tecnico.ulisboa.pt
+% Website:       https://www.github.com/gabmoreira/maks
+% Last revision: 14-July-2021
+
 close all;
 clear all;
 clc;
