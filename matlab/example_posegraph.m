@@ -1,4 +1,4 @@
-% POSEGRAPH_EXAMPLE Mini tutorial on the Posegraph class
+% EXAMPLE_POSEGRAPH Mini tutorial on the Posegraph class
 %
 % Other m-files required: ./@Posegraph/*, ./geo/*, ./math/*, ./sparse/*
 % Subfunctions: none
