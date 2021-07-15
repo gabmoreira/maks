@@ -1,4 +1,4 @@
-% POSEGRAPH_EXAMPLE Mini tutorial on SfM from two images
+% EXAMPLE_SFM Mini tutorial on SfM from two images
 %
 % Other m-files required: ./@Matcha/*, ./geo/*, ./math/*, ./3d/*, ./graphix/*
 % Subfunctions: none
