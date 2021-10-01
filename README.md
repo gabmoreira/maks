@@ -9,7 +9,7 @@
 TODO
 
 ## References
-* Gabriel Moreira, Manuel Marques and João Paulo Costeira. Rotation Averaging in a Split Second: A Primal-Dual Method and a Closed-Form for Cycle Graphs. (To appear in) Internacional Conference on Computer Vision (ICCV), 2021.
+* Gabriel Moreira, Manuel Marques and João Paulo Costeira. Rotation Averaging in a Split Second: A Primal-Dual Method and a Closed-Form for Cycle Graphs. (To appear in) Internacional Conference on Computer Vision (ICCV), 2021. [PDF](https://arxiv.org/pdf/2109.08046.pdf)
 * Gabriel Moreira, Manuel Marques and João Paulo Costeira. Fast Pose Graph Optimization via Krylov-Schur and Cholesky Factorization. IEEE/CVF Winter Conference on Applications of Computer Vision (WACV), 2021.
 
 ## Datasets
