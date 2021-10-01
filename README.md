@@ -10,8 +10,9 @@ The first thing you need to know is that the MATLAB code is independent from C++
 
 The C++ code depends on the Eigen library for matrix operations and Intel® oneApi MKL for the PARDISO sparse solvers and BLAS.
 
-We provide a (hopefully) fast way of compiling everything. Just run  
-`install.sh`. 
+We provide a (hopefully) fast way of compiling everything. Just run.   
+`source install.sh`  
+
 This script will try to locate everything needed and compile the code with either icc or g++.    
 If you run into trouble, edit the paths for Eigen and for your installation of oneAPI MKL.  
 
