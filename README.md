@@ -16,7 +16,10 @@ We provide a (hopefully) fast way of compiling everything. Just run.
 This script will try to locate everything needed and compile the code with either `icc` or `g++`.    
 If you run into trouble, edit the paths for Eigen and for your installation of oneAPI MKL.  
 
-The executable will be in the source directory with the name `ravess_example`. 
+The executable has the name `ravess_example`.  
+
+To run:  
+`./ravess_example ../data/sphere_SO3.g2o`  
 
 ### References
 [1] Gabriel Moreira, Manuel Marques and João Paulo Costeira. Rotation Averaging in a Split Second: A Primal-Dual Method and a Closed-Form for Cycle Graphs. (To appear in) Internacional Conference on Computer Vision (ICCV), 2021. [PDF](https://arxiv.org/pdf/2109.08046.pdf).  
