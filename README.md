@@ -13,7 +13,7 @@ The C++ code depends on the Eigen library for matrix operations and Intel® oneA
 We provide a (hopefully) fast way of compiling everything. Just run.   
 `source install.sh`  
 
-This script will try to locate everything needed and compile the code with either icc or g++.    
+This script will try to locate everything needed and compile the code with either `icc` or `g++`.    
 If you run into trouble, edit the paths for Eigen and for your installation of oneAPI MKL.  
 
 The executable will be in the source directory with the name `ravess_example`. 
@@ -32,5 +32,6 @@ Some of the original datasets can be found [here](https://lucacarlone.mit.edu/da
 [4] L. Carlone, D. M. Rosen, G. C. Calafiore, J. J. Leonard, and F. Dellaert. Lagrangian Duality in 3D SLAM: Verification Techniques and Optimal Solutions. In IEEE/RSJ Intl. Conf. on Intelligent Robots and Systems (IROS), 2015.  
 
 
-Gabriel Moreira, October 2021
+Gabriel Moreira
+October 2021
 
