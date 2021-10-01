@@ -1,7 +1,7 @@
 ## MAKS - Motion Averaging
 
 ### Dependencies
-* [Eigen](http://eigen.tuxfamily.org) : Header-only library used for matrix operations and sparse solvers.
+* [Eigen](http://eigen.tuxfamily.org) : Header-only library used for matrix operations.
 * [Intel® MKL](https://software.intel.com/content/www/us/en/develop/tools/math-kernel-library.html) : Free proprietary math library.
 
 
@@ -9,7 +9,7 @@
 Run the shell script install.sh
 Edit the paths for Eigen and Intel MKL if needed
 
-MATLAB code is independent from C++
+MATLAB code is independent from C++ and is ready-to-go.
 
 ### References
 * Gabriel Moreira, Manuel Marques and João Paulo Costeira. Rotation Averaging in a Split Second: A Primal-Dual Method and a Closed-Form for Cycle Graphs. (To appear in) Internacional Conference on Computer Vision (ICCV), 2021. [PDF](https://arxiv.org/pdf/2109.08046.pdf)
