@@ -14,7 +14,7 @@ We provide a (hopefully) fast way of compiling everything. Just run.
 `source install.sh`  
 
 This script will try to locate everything needed and compile the code with either `icc` or `g++`.    
-If you run into trouble, edit the paths for Eigen and for your installation of oneAPI MKL.  
+If you run into trouble, edit the paths for Eigen and for your installation of oneAPI MKL in the shell script.  
 
 The executable has the name `ravess_example`.  
 
