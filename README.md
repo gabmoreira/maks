@@ -8,11 +8,14 @@ MAKS contains routines for pose graph optimization and rotation averaging. Still
 ### Compiling (C++)
 The first thing you need to know is that the MATLAB code is independent from C++. So no need to compile anything!  
 
-The C++ code depends on the Eigen library for matrix operations and Intel® oneApi MKL for the PARDISO sparse solvers and BLAS.  
+The C++ code depends on the Eigen library for matrix operations and Intel® oneApi MKL for the PARDISO sparse solvers and BLAS.
 
-We provide a (hopefully) fast way of compiling everything. Jus run the shell script install.sh  
+We provide a (hopefully) fast way of compiling everything. Just run  
+`install.sh`. 
 This script will try to locate everything needed and compile the code with either icc or g++.    
 If you run into trouble, edit the paths for Eigen and for your installation of oneAPI MKL.  
+
+The executable will be in the source directory with the name `ravess_example`. 
 
 ### References
 * Gabriel Moreira, Manuel Marques and João Paulo Costeira. Rotation Averaging in a Split Second: A Primal-Dual Method and a Closed-Form for Cycle Graphs. (To appear in) Internacional Conference on Computer Vision (ICCV), 2021. [PDF](https://arxiv.org/pdf/2109.08046.pdf)
