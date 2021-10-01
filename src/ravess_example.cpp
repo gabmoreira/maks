@@ -31,8 +31,7 @@ int main(int argc, char *argv[]) {
     
     int MAX_EDGES = 25000;
     
-    std::string dataset(argv[1]);
-    std::string path = "/Users/gabriel/Desktop/maks/data/" + dataset + "_SO3.g2o";
+    std::string path(argv[1]);
     
     int num_nodes;
     int num_edges;
