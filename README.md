@@ -31,6 +31,6 @@ Some of the original datasets can be found [here](https://lucacarlone.mit.edu/da
 [3] L. Carlone, R. Tron, K. Daniilidis, and F. Dellaert. Initialization Techniques for 3D SLAM: a Survey on Rotation Estimation and its Use in Pose Graph Optimization. In IEEE Intl. Conf. on Robotics and Automation (ICRA), pages 4597-4604, 2015.  
 [4] L. Carlone, D. M. Rosen, G. C. Calafiore, J. J. Leonard, and F. Dellaert. Lagrangian Duality in 3D SLAM: Verification Techniques and Optimal Solutions. In IEEE/RSJ Intl. Conf. on Intelligent Robots and Systems (IROS), 2015.  
 
-### Author
-* Gabriel Moreira, October 2021
+
+Gabriel Moreira, October 2021
 
