@@ -24,7 +24,7 @@ The executable will be in the source directory with the name `ravess_example`.
 
 ### Datasets
 
-The datasets are provided as .g2o files. You will find certain datasets with a naming convention like "\_SO3.g2o". These were the ones used in our ICCV paper [1]. The difference between e.g., sphere.g2o and sphere_SO3.g2o is that the former was cleaned of repeated edges.  
+The datasets are provided as .g2o files. You will find certain datasets with a naming convention like "\_SO3.g2o". These were the ones used in our ICCV paper [1]. The difference between e.g., sphere.g2o and sphere_SO3.g2o is that the former was cleaned of repeated edges and has no vertex/node information, only edge measurements. 
 
 Some of the original datasets can be found [here](https://lucacarlone.mit.edu/datasets/):  
 
