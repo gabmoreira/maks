@@ -1,5 +1,5 @@
 ## MAKS - Motion Averaging
-MAKS contains routines for pose graph optimization and rotation averaging. Still under development!
+MAKS contains routines for pose graph optimization and rotation averaging.
 
 ### Dependencies
 * [Eigen](http://eigen.tuxfamily.org) : Header-only library used for matrix operations and linear algebra solvers.
